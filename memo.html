@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+             <style>
+             input {
+               float:right;
+              }
+            </style>
+       
+        <title>메모장</title>
+    </head>
+    <body>
+        <h5>현재 시간은 :<strong class = "h1-clock" ></strong> </h5>
+          
+           
+        <button id ="btn1">현재시간_복사</button>
+        <input class='inputtime' type='time' min='00:00' max='23:59'/>
+        <h5>메모장</h5>    
+        <form>
+            
+          <textarea cols="45" rows="50" ></textarea> <textarea cols="45" rows="50" ></textarea> 
+           
+         
+            <input type ="reset" value="clear" >    
+            <input id ="toggle" type="button" value="white" onclick="
+            var textare_color = document.querySelectorAll('textarea') ; 
+            if(this.value === 'white' ){
+                textare_color[0].style.backgroundColor ='black';
+                textare_color[0].style.color ='white';
+                textare_color[0].style.fontSize ='13px';
+                textare_color[1].style.backgroundColor ='black';
+                textare_color[1].style.color ='white';
+                textare_color[1].style.fontSize ='13px';
+                document.querySelector('#toggle').value = 'black';
+            } else {
+                textare_color[0].style.backgroundColor ='white';
+                textare_color[0].style.color ='black';
+                textare_color[0].style.fontSize ='13px';
+                textare_color[1].style.backgroundColor ='white';
+                textare_color[1].style.color ='black';
+                textare_color[1].style.fontSize ='13px';
+                document.querySelector('#toggle').value = 'white';
+            }
+            ">
+       </form>        
+        <script>
+         src="memo.js"
+
+        </script>
+     </body>
+</html>
